@@ -1,0 +1,56 @@
+https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
+https://machinelearningmastery.com/cost-sensitive-learning-for-imbalanced-classification/
+https://archive.is/U1cg6
+
+
+quais são nossos problemas enfrentados?
+- temos dados desbalanceados
+- as métricas comumente utilizadas não são suficientes para criar bons modelos
+- temos problemas nos falsos positivos
+- o que seria os falsos positivos e falsos negativos? 
+- o que seria o 1 e o 0
+
+soluções:
+- o 1 seria a classe que vc estaria interessado.
+    por exemplo: 1 seria os clientes fraudulentos e 0 os não fraudulentos
+                 1 seria os indivíduos com câncer e 0 os que não tem
+
+https://www.evidentlyai.com/classification-metrics/confusion-matrix#:~:text=A%20confusion%20matrix%20is%20a%20table%20that%20summarizes%20the%20performance,FN)%20of%20the%20model's%20predictions.
+- em relação às falsas previsões:
+    - falsos positivos: seria basicamente um alarme falso, na estatística o erro do tipo I.
+          Seria assumir que algo é falso quando na verdade é verdadeiro
+          por exemplo: 
+                       classificar um cliente como mal pagador mas ele seria um bom pagador
+                       classificar um paciente com câncer mas ele não teria
+                       classificar um email como spam mas n seria spam
+
+    - falsos negativos: comumente conhecido como casos perdidos, na estatística o erro do tipo II
+          Seria assumir que algo é verdadeiro quando na verdade é falso
+          por exemplo:
+                       classificar um cliente como bom pagador mas ele seria um mal pagador
+                       classificar um paciente como não tendo cancêr mas na verdade ele teria câncer
+                       classificar um email como não sendo spam, mas no caso seria spam
+
+
+Entendendo as métricas:
+    Precisão:
+      Precisão é a capacidade de avaliar quanto o modelo acertou perante todas as predições feitas por ele.
+          por exemplo:
+                      o modelo classificou 1000 mau pagagores, mas na realidade só existem 800 mau pagadores.
+                      Logo: seu modelo tem uma precisão de 80% nos casos de mau pagadores.
+
+      Precisão é boa para Falsos Positivos, pois nos casos dos emails spam, você quer evitar de mandar emails reais para
+      caixas de spam
+
+    Recall:
+      O recall mostra quantos exemplos da classe alvo o modelo conseguiu acertar. 
+          por exemplo:
+                      de 1000 mau pagadores existentes, o modelo acertou 800.
+                      Logo: o modelo tem um recall de 80%
+
+    Recall é bom para Falsos Negativos. Por exemplo, você pode otimizar o recall se não quiser perder nenhum spam (mesmo às custas da sinalização falsa de alguns e-mails legítimos).
+
+
+
+
+

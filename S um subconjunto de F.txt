@@ -1,0 +1,100 @@
+S um subconjunto de F
+v(S) calcula o ganho do subconjunto S ao realizar uma tarefa
+
+
+supondo F = {1,2,3,4}
+
+permutações de F:
+ - [1,2,3,4] 
+ - [1,2,4,3]
+ - [1,3,2,4]
+ - [3,1,2,4]
+ - [3,2,1,4]
+ - ...
+
+para calcular a importância do jogador 3 ({3}) temos que observar como as pessoas trabalhavam antes do jogador entrar no 
+atividade
+
+feito isso, agora é observar como é o rendimento daquela atividade quando o jogador entra no time
+
+e se faz a pergunta: teve algum ganho? o time aumentou sua 
+produtividade? ou teve uma perda? ou o jogador 3 n fez nenhuma
+diferença?
+
+observação:
+
+vimos atrás as possíveis permutações de F, podemos utilizar 
+a seguinte notação:
+	P = permutação de F
+
+logo, os possíveis valores de P são:
+
+ - [1,2,3,4] 
+ - [1,2,4,3]
+ - [1,3,2,4]
+ - [3,1,2,4]
+ - [3,2,1,4]
+ - ...
+
+
+		P versus v(S)
+
+algo a se constatar é que quando queremos observar a importância de um determinado jogador, não estamos interessados em saber como cada jogador individualmente trabalhava antes de ser adicionado o jogador que queremos medir a importância, e sim o quanto o jogador adicionado
+agregou na atividade.
+
+por exemplo:
+
+ temos os jogadores 1 e 2. as possíveis permutações desses jogadores se dá por
+	
+	[1,2] ou [2,1]
+
+quando aplicamos v em {1,2} esperamos que o resultado de 
+v([1,2]) seja igual a v([2,1]).
+Ou seja, o resultado final da atividade não depende da ordem dos jogadores.
+
+por isso que, ao adicionar o terceiro jogador, queremos entender o quanto aquele jogador impactou na atividade que
+já acontecia antes.
+
+logo, v usa como base a coligação, não a permutação.
+usando o exemplo acima temos então que, ao medir a importância do jogador 3,
+
+ - [1,2,3,4] = v({1,2,3})   - v({1,2})
+ - [1,2,4,3] = v({1,2,3,4}) - v({1,2,4})
+ - [1,3,2,4] = v({1,3})     - v({1})
+ - [3,1,2,4] = v({3})       - v({})
+ - [3,2,1,4] = v({3})       - v({})
+ - ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
